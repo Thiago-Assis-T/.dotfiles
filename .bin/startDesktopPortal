@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+sleep 1
+killall -e xdg-desktop-portal-wlr
+killall xdg-desktop-portal
+killall xdg-permission-store
+killall xdg-document-portal
+dbus-launch /usr/libexec/xdg-desktop-portal-wlr &
+sleep 2
+dbus-launch /usr/libexec/xdg-desktop-portal &

@@ -3,7 +3,7 @@ export MOZ_ENABLE_WAYLAND=1
 export GDK_BACKEND=wayland
 export SDL_VIDEODRIVER=wayland
 export $(dbus-launch)
-startDesktopPortal &
+.bin/startDesktopPortal &
 exec gentoo-pipewire-launcher &
 exec gentoo-pipewire-launcher restart &
 exec foot -s &

@@ -7,6 +7,10 @@ if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
 	dbus-run-session slstatus -s | dwl -s .bin/dwlStart
 fi
 
+if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty2 ]]; then
+        gamescope -e --adaptive-sync --expose-wayland -- steam -tenfoot
+fi
+
 if [[ -f ~/.bashrc ]] ; then
 	. ~/.bashrc
 fi

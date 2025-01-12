@@ -7,6 +7,7 @@ return {
 			lint.linters_by_ft = {
 				lua = { "luacheck" },
 				c = { "clangtidy" },
+				python = { "pylint", "mypy" },
 			}
 			-- Create autocommand which carries out the actual linting
 			-- on the specified events.

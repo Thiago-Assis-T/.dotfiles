@@ -88,6 +88,22 @@ local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = vim.tbl_deep_extend("force", capabilities, require("cmp_nvim_lsp").default_capabilities())
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 local lspconfig = require("lspconfig")
+
+lspconfig.pylsp.setup({
+	capabilities = capabilities,
+	settings = {
+		pylsp = {
+			plugins = {
+				yapf = {
+					enabled = true,
+				},
+				pylint = {
+					enabled = true,
+				},
+			},
+		},
+	},
+})
 lspconfig.clangd.setup({
 	capabilities = capabilities,
 	settings = {},

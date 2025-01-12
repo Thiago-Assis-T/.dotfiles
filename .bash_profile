@@ -10,7 +10,7 @@ fi
 if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty2 ]]; then
         gentoo-pipewire-launcher &
         gentoo-pipewire-launcher restart &
-        gamescope -e -- steam -tenfoot -steamdeck
+        dbus-run-session gamescope -e -- steam -tenfoot -steamdeck
 fi
 
 if [[ -f ~/.bashrc ]] ; then

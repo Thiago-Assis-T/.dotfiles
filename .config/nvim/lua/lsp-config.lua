@@ -104,6 +104,18 @@ lspconfig.pylsp.setup({
 		},
 	},
 })
+lspconfig.gopls.setup({
+	capabilities = capabilities,
+	settings = {
+		gopls = {
+			completeUnimported = true,
+			usePlaceholders = true,
+			analyses = {
+				unusedparams = true,
+			},
+		},
+	},
+})
 lspconfig.clangd.setup({
 	capabilities = capabilities,
 	settings = {},

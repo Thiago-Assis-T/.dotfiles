@@ -6,6 +6,7 @@ return {
 			"lua",
 			"c",
 			"python",
+			"go",
 		},
 		auto_install = true,
 		highlight = {

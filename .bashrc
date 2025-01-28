@@ -19,3 +19,4 @@ export PATH="/home/$USER/.bin:$PATH"
 eval "$(starship init bash)"
 fastfetch 
 alias formatFile='curl -O https://raw.githubusercontent.com/torvalds/linux/refs/heads/master/.clang-format'
+alias cat='bat'

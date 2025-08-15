@@ -16,5 +16,6 @@ fi
 
 
 # Put your fun stuff here.
+export PATH="${PATH}:${HOME}/.dev/flutter/bin"
 alias cat='bat'
 eval "$(starship init bash)"
